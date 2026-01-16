@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+	<title></title>
+	<style type="text/css">
+		
+		:root{
+			--font-sans: "Computer Modern Sans", sans;
+			--font-serif: "Computer Modern Serif", serif;
+			--grey: rgba(255, 255, 255, 0.6);
+			--light-grey: rgba(255, 255, 255, 0.3);
+			--light-light-grey: rgba(255, 255, 255, 0.15);
+			--font-size-1: 56px;
+			--font-size-logo: 32px;
+			--font-size-2: 28px;
+			--font-size-3: 24px;
+			--font-size-4: 20px;
+			--font-size-5: 18px;
+		}
+
+		html, body{
+			background: black;
+			color: white;
+			font-family: var(--font-serif);
+			padding: 0;
+    		margin: 0;
+    		height: 100%;
+    		display: flex;
+    		flex-direction: column;
+		}
+
+		header {
+			height: 72px;
+			display: flex;
+			align-items: center;
+			padding: 16px 24px;
+		}
+
+		header .logo{
+		    display: inline-block;
+    		font-size: var(--font-size-logo);
+		}
+
+		header .logo span{
+			font-style: italic;
+		    padding-left: 2px;
+		    padding-right: 6px;
+		    margin-top: 8px;
+		}
+
+		main {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			flex-grow: 1;
+/*			padding: 24px;*/
+		}
+
+
+		section{
+			justify-content: flex-start;
+			max-width: 720px;
+			display: flex;
+/*			width: 100%;*/
+			flex-direction: column;
+			margin-bottom: 16px;
+			margin-top: 72px;
+			padding: 0 24px;
+		}
+
+		section h3{
+			font-size: var(--font-size-3);
+			display: flex;
+			width: 100%;
+			align-items: center;
+			color: var(--grey);
+		}
+
+		section h3 span{
+			border-bottom: 1px solid var(--light-grey);
+			display: inline-block;
+			flex-grow: 1;
+			margin-left: 16px;
+		}
+
+
+		section.hero{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 8px 0;
+		}
+
+		.hero h1{
+			font-size: var(--font-size-1);
+			text-align: center;
+			margin-bottom: 12px;
+		}
+
+		.hero p{
+			color: var(--grey);
+			font-size: var(--font-size-2);
+			text-align: center;
+		}
+
+		footer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 72px;
+			margin-top: 64px;
+			padding: 24px;
+		}
+
+		.research-item{
+			text-decoration: none;
+			color: white;
+			border-radius: 6px;
+			border: 1px solid var(--light-grey);
+			padding: 24px;
+			transition: 200ms linear;
+			margin-bottom: 32px;
+		}
+
+		.research-item{
+			outline: none;
+		}
+
+		.research-item:focus,
+		.research-item:hover{
+			background: var(--light-light-grey);
+			border-color: var(grey);
+			transform: translateY(-4px);
+		}
+
+
+		.research-item h4{
+			font-size: var(--font-size-4);
+			font-style: bold;
+			margin-bottom: 4px;
+			margin-top: 0;
+		}
+
+		.research-item .subtitle{
+			color: var(--grey);
+			font-family: "Computer Modern Sans";
+			margin-bottom: 16px;
+		}
+
+		section.team h4{
+			font-size: var(--font-size-3);
+    		font-weight: bold;
+			margin: 0;
+			margin-top: 48px;
+		}
+
+		section.team p{
+			font-size: var(--font-size-4);
+		}
+
+
+		section.mission p{
+			font-size: var(--font-size-3);
+		}
+
+		section.contact ul{
+			font-size: var(--font-size-3);
+		}
+
+		tr{
+			height: 32px;
+			border-bottom: 1px solid var(--light-grey);
+		}
+
+		tr:hover{
+			background-color: var(--light-light-grey);
+		}
+
+		th{
+			text-align: left;
+			width: 140px;
+			font-weight: 800;
+		}
+
+		th, td{
+			padding: 12px;
+
+		}
+
+		table, th, td{
+			border: 1px solid var(--light-grey);
+			border-collapse: collapse;
+			font-size: var(--font-size-4);
+		}
+
+		section.projects h4{
+			color: var(--grey);
+			font-size: var(--font-size-3);
+			margin-bottom: 4px;
+		}
+
+		section.projects p{
+			margin-top: 8px;
+			margin-bottom: 32px;
+			font-size: var(--font-size-4);
+			line-height: 1.35em;
+		}
+
+		.orange{
+			color:orange;
+		}
+
+		.italic {
+			font-style: italic;
+		}
+
+		@media screen and (max-width: 720px) {
+			:root{
+				--font-size-1: 32px;
+				--font-size-2: 22px;
+				--font-size-3: 20px;
+				--font-size-4: 18px;
+				--font-size-5: 15px;
+				--font-size-logo: 28px;
+			}
+
+			header {
+				height: 72px;
+				display: flex;
+				align-items: center;
+				padding: 12px 16px;
+			}
+
+			.hero h1{
+				min-height: 132px;
+				margin-bottom: 0;
+			}
+
+			.hero p{
+				margin-top: 0;
+			}
+		}
+
+
+
+		.grow{
+			flex-grow: 1;
+		}
+
+		.team h4{
+			display: flex;
+		}
+
+		.team h4 a {
+			opacity: 0.7;
+			width: 24px;
+			height: 24px;
+			display: inline-block;
+			margin-left: 16px;
+		}
+
+		.team h4 a:hover {
+			opacity: 1;
+		}
+
+		.team h4 a.github{
+			content: url(assets/github.svg);
+		}
+
+		.team h4 a.twitter{
+			content: url(assets/twitter.svg);
+		}
+
+
+		.contact p {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			flex-wrap: wrap;
+		}
+
+		.contact a{
+			width: 120px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			color: white;
+			font-family: var(--font-sans);
+			font-size: var(--font-size-3);
+			padding: 24px;
+			border-radius: 8px;
+			opacity: 0.65;
+			transition: 150ms linear;
+		}
+
+		.contact a:hover{
+			opacity: 1;
+			background: var(--light-light-grey);
+		}
+
+		.contact a img{
+			width: 48px;
+			margin-bottom: 16px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<span class="logo">{<span>ideal</span>}</span>
+	</header>
+	<main>
+		<section class="hero">
+			<h1>Bitcoin is supposed to be {<i id="hero" class="orange">scalable</i>&hairsp;} cash.</h1>
+			<p>
+				{&hairsp;<i>ideal&thinsp;</i>} champions the use of cryptography as a means of effecting social and political change.
+			</p>
+		</section>
+		<section class="mission">
+			<h3>Who We Are <span></span></h3>
+			<p>
+				Through the power of mathematics, we aim to ensure that the freedom to transact is upheld for all individuals globally, recognizing that free and fair access to money is the foundation upon which all other human liberties are secured.<br><br>
+
+				Our work centers on the development of private and permissionless Bitcoin scaling technologies, including the advancement of BitVM and its underlying cryptographic primitives.<br><br>
+
+				We work toward {&hairsp;<i>ideal</i>&thinsp;} Bitcoin—not good-enough Bitcoin—as a principled undertaking, and welcome partners unintimidated by this quixotic vision. 
+			</p>
+
+		</section>
+
+		<section class="projects">
+			<h3>Current Projects <span></span></h3>
+			<h4>Argo Garbled Circuit Scheme</h4>
+			<p>Argo is the industry-leading garbled circuit scheme for off-chain SNARK verification.</p>
+			<table>
+			  <thead>
+			  <tbody>
+			    <tr>
+			      <th>Verifier:</th>
+			      <td>Groth16</td>
+			    </tr>
+			    <tr>
+			      <th>Table size:</th>
+			      <td>20 MB</td>
+			    </tr>
+			    <tr>
+			      <th>Setup time:</th>
+			      <td>150 ms</td>
+			    </tr>
+			    <tr>
+			      <th>Proof type:</th>
+			      <td>Cut-and-choose / validity proof</td>
+			    </tr>
+			    <tr>
+			      <th>Model:</th>
+			      <td>Permissionless challenging</td>
+			    </tr>
+			  </tbody>
+			</table>
+
+
+		</section>
+
+
+		<section>
+			<h3>Research Papers <span></span></h3>
+			<a class="research-item" href="https://eprint.iacr.org/2026/049" target="_blank">
+				<h4>Argo MAC: Garbling with Elliptic Curve MACs</h4>
+				<div class="subtitle">ePrint 2026/049 • Cryptology ePrint Archive</div>
+				<div>A breakthrough construction enabling a 1000x improvement on BitVM3 for efficient verification of complex statements on Bitcoin.</div>
+			</a>
+
+			<a class="research-item" href="https://eprint.iacr.org/2025/068" target="_blank">
+				<h4>Shielded CSV: Private and Efficient Client-Side Validation</h4>
+				<div class="subtitle">ePrint 2025/068 • Cryptology ePrint Archive</div>
+				<div>A second layer protocol enabling strong privacy and efficient scalability of Bitcoin payments.</div>
+			</a>
+		</section>
+
+		<section class="team">
+			<h3>Team <span></span></h3>
+			
+			<h4>Robin Linus
+				<span class="grow"></span>
+				<a href="https://x.com/robin_linus" class="twitter"></a> 
+				<a href="https://github.com/robinlinus" class="github"></a> 
+			</h4>
+			<p>
+				Robin is the creator of BitVM, and it’s more recent BitVM2 and BitVM3 updates. He is currently a PhD student at Stanford studying Bitcoin with a focus on bridging protocols. Robin leads the BitVM Alliance creating the first mainnet-ready BitVM implemetation, which is used in some form by all existing BitVM and Garbled Circuits based bridges.
+			</p>
+
+			<h4>Liam Eagen 
+					<span class="grow"></span>
+					<a href="https://x.com/liameagen" class="twitter"></a> 
+					<a href="https://github.com/Liam-Eagen" class="github"></a> 
+			</h4>
+			<p>
+				Liam is the former chief scientist and founding cryptographer of Alpen Labs. He worked on BitVM2 and the Groth16 verifier (GLOCKS?) for these protocols and co-discovered the use of Garbled Circuits for CDS on Bitcoin. He previously worked on SNARK research for companies including Aztec, Polygon Zero, and Blockstream.
+			</p>
+
+			<h4>Ying Tong Lai
+				<span class="grow"></span>
+				<a href="https://x.com/therealyingtong" class="twitter"></a>
+				<a href="https://github.com/therealyingtong" class="github"></a> 
+			</h4>
+			<p>
+				Ying Tong is a senior cryptography engineer with previous work at ZCash and the Ethereum Foundation. She is one of the primary authors Halo2 with extensive experience implementing circuits and proof systems. Ying Tong is the primary author of the Argo Garbled Circuits implementation, the industry-leading scheme for BitVM3. 
+			</p>
+			
+		</section>
+		<section class="contact">
+			<h3>Contact<span></span></h3>
+			
+			<p>
+				<a href="mailto:hello@idealgroup.com" target="_blank">
+					<img src="assets/mail.svg">
+					<span>Email</span>
+				</a>
+				<a href="https://x.com/idealgroup" target="_blank">
+					<img src="assets/twitter.svg">
+					<span>Twitter</span>
+				</a>
+				<a href="https://t.me/idealgroup" target="_blank">
+					<img src="assets/telegram.svg">
+					<span>Telegram</span>
+				</a>
+				<a href="https://github.com/idealgroup" target="_blank">
+					<img src="assets/github.svg">
+					<span>GitHub</span>
+				</a>
+			</p>
+		</section>
+	</main>
+	<footer>
+
+		By the creators of&nbsp; <b>BitVM</b>
+	</footer>
+	<script type="text/javascript">
+		const $hero = document.querySelector("#hero")
+		const adjectives = ['scalable', 'private', 'permissionless', 'cypherpunk']
+		let i = 0;
+		setInterval(_ => {
+			i = (i + 1) % adjectives.length
+			$hero.textContent = adjectives[i]
+		}, 2000)
+	</script>
+</body>
+</html>
