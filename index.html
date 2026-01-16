@@ -19,6 +19,7 @@
 			--font-size-3: 24px;
 			--font-size-4: 20px;
 			--font-size-5: 18px;
+			--orange: #ef8e1a;
 		}
 
 		html, body{
@@ -30,6 +31,15 @@
     		height: 100%;
     		display: flex;
     		flex-direction: column;
+		}
+
+		a {
+			color: var(--orange);
+			text-decoration: none;
+		}
+
+		a:hover,:focus{
+			text-decoration: underline;
 		}
 
 		header {
@@ -56,7 +66,6 @@
 			flex-direction: column;
 			align-items: center;
 			flex-grow: 1;
-/*			padding: 24px;*/
 		}
 
 
@@ -64,7 +73,6 @@
 			justify-content: flex-start;
 			max-width: 720px;
 			display: flex;
-/*			width: 100%;*/
 			flex-direction: column;
 			margin-bottom: 16px;
 			margin-top: 72px;
@@ -111,7 +119,7 @@
 			align-items: center;
 			justify-content: center;
 			height: 72px;
-			margin-top: 64px;
+			margin-top: 80px;
 			padding: 24px;
 		}
 
@@ -210,7 +218,7 @@
 		}
 
 		.orange{
-			color:orange;
+			color:var(--orange);
 		}
 
 		.italic {
@@ -386,17 +394,17 @@
 			
 			<h4>Robin Linus
 				<span class="grow"></span>
-				<a href="https://x.com/robin_linus" class="twitter"></a> 
-				<a href="https://github.com/robinlinus" class="github"></a> 
+				<a href="https://x.com/robin_linus" class="twitter" target="_blank"></a> 
+				<a href="https://github.com/robinlinus" class="github" target="_blank"></a> 
 			</h4>
 			<p>
 				Robin is the creator of BitVM, and it’s more recent BitVM2 and BitVM3 updates. He is currently a PhD student at Stanford studying Bitcoin with a focus on bridging protocols. Robin leads the BitVM Alliance creating the first mainnet-ready BitVM implemetation, which is used in some form by all existing BitVM and Garbled Circuits based bridges.
 			</p>
 
 			<h4>Liam Eagen 
-					<span class="grow"></span>
-					<a href="https://x.com/liameagen" class="twitter"></a> 
-					<a href="https://github.com/Liam-Eagen" class="github"></a> 
+				<span class="grow"></span>
+				<a href="https://x.com/liameagen" class="twitter" target="_blank"></a> 
+				<a href="https://github.com/Liam-Eagen" class="github" target="_blank"></a> 
 			</h4>
 			<p>
 				Liam is the former chief scientist and founding cryptographer of Alpen Labs. He worked on BitVM2 and the Groth16 verifier (GLOCKS?) for these protocols and co-discovered the use of Garbled Circuits for CDS on Bitcoin. He previously worked on SNARK research for companies including Aztec, Polygon Zero, and Blockstream.
@@ -404,8 +412,8 @@
 
 			<h4>Ying Tong Lai
 				<span class="grow"></span>
-				<a href="https://x.com/therealyingtong" class="twitter"></a>
-				<a href="https://github.com/therealyingtong" class="github"></a> 
+				<a href="https://x.com/therealyingtong" class="twitter" target="_blank"></a>
+				<a href="https://github.com/therealyingtong" class="github" target="_blank"></a> 
 			</h4>
 			<p>
 				Ying Tong is a senior cryptography engineer with previous work at ZCash and the Ethereum Foundation. She is one of the primary authors Halo2 with extensive experience implementing circuits and proof systems. Ying Tong is the primary author of the Argo Garbled Circuits implementation, the industry-leading scheme for BitVM3. 
@@ -437,7 +445,7 @@
 	</main>
 	<footer>
 
-		By the creators of&nbsp; <b>BitVM</b>
+		By the creators of&nbsp; <b><a href="https://bitvm.org" target="_blank">BitVM</a></b>
 	</footer>
 	<script type="text/javascript">
 		const $hero = document.querySelector("#hero")
