@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
-	<title></title>
+	<title>{&thinsp;ideal&thinsp;}</title>
 	<style type="text/css">
 		
 		:root{
@@ -13,13 +13,13 @@
 			--grey: rgba(255, 255, 255, 0.6);
 			--light-grey: rgba(255, 255, 255, 0.3);
 			--light-light-grey: rgba(255, 255, 255, 0.15);
+			--orange: #ef8e1a;
 			--font-size-1: 56px;
 			--font-size-logo: 32px;
 			--font-size-2: 28px;
 			--font-size-3: 24px;
 			--font-size-4: 20px;
 			--font-size-5: 18px;
-			--orange: #ef8e1a;
 		}
 
 		html, body{
@@ -71,12 +71,14 @@
 
 		section{
 			justify-content: flex-start;
-			max-width: 720px;
+			max-width: 768px;
 			display: flex;
 			flex-direction: column;
 			margin-bottom: 16px;
 			margin-top: 72px;
 			padding: 0 24px;
+			box-sizing: border-box;
+			width: 100%;
 		}
 
 		section h3{
@@ -142,6 +144,7 @@
 			background: var(--light-light-grey);
 			border-color: var(grey);
 			transform: translateY(-4px);
+			text-decoration: none;
 		}
 
 
@@ -191,6 +194,7 @@
 			text-align: left;
 			width: 140px;
 			font-weight: 800;
+			color: var(--grey);
 		}
 
 		th, td{
@@ -224,34 +228,6 @@
 		.italic {
 			font-style: italic;
 		}
-
-		@media screen and (max-width: 720px) {
-			:root{
-				--font-size-1: 32px;
-				--font-size-2: 22px;
-				--font-size-3: 20px;
-				--font-size-4: 18px;
-				--font-size-5: 15px;
-				--font-size-logo: 28px;
-			}
-
-			header {
-				height: 72px;
-				display: flex;
-				align-items: center;
-				padding: 12px 16px;
-			}
-
-			.hero h1{
-				min-height: 132px;
-				margin-bottom: 0;
-			}
-
-			.hero p{
-				margin-top: 0;
-			}
-		}
-
 
 
 		.grow{
@@ -290,7 +266,7 @@
 			flex-wrap: wrap;
 		}
 
-		.contact a{
+		.contact a {
 			width: 120px;
 			display: flex;
 			flex-direction: column;
@@ -315,6 +291,35 @@
 			width: 48px;
 			margin-bottom: 16px;
 		}
+
+
+		@media screen and (max-width: 720px) {
+			:root{
+				--font-size-1: 32px;
+				--font-size-2: 22px;
+				--font-size-3: 20px;
+				--font-size-4: 18px;
+				--font-size-5: 15px;
+				--font-size-logo: 28px;
+			}
+
+			header {
+				height: 72px;
+				display: flex;
+				align-items: center;
+				padding: 12px 16px;
+			}
+
+			.hero h1{
+				min-height: 132px;
+				margin-bottom: 0;
+			}
+
+			.hero p{
+				margin-top: 0;
+			}
+		}
+
 	</style>
 </head>
 <body>
@@ -342,8 +347,8 @@
 
 		<section class="projects">
 			<h3>Current Projects <span></span></h3>
-			<h4>Argo Garbled Circuit Scheme</h4>
-			<p>Argo is the industry-leading garbled circuit scheme for off-chain SNARK verification.</p>
+			<h4>Argo: Making Garbled Circuits Efficient</h4>
+			<p>Argo is the industry-leading garbled circuit scheme for off-chain SNARK verification, with benchmarks showing 1000× improvements in size and speed vs. traditional schemes.</p>
 			<table>
 			  <thead>
 			  <tbody>
@@ -398,7 +403,7 @@
 				<a href="https://github.com/robinlinus" class="github" target="_blank"></a> 
 			</h4>
 			<p>
-				Robin is the creator of BitVM, and it’s more recent BitVM2 and BitVM3 updates. He is currently a PhD student at Stanford studying Bitcoin with a focus on bridging protocols. Robin leads the BitVM Alliance creating the first mainnet-ready BitVM implemetation, which is used in some form by all existing BitVM and Garbled Circuits based bridges.
+				Robin is the creator of BitVM, and its more recent BitVM2 and BitVM3 updates. He is currently a PhD student at Stanford studying Bitcoin with a focus on bridging protocols. Robin leads the BitVM Alliance creating the first mainnet-ready BitVM implementation, which is used in some form by all existing BitVM and Garbled Circuits based bridges.
 			</p>
 
 			<h4>Liam Eagen 
@@ -432,7 +437,7 @@
 					<img src="assets/twitter.svg">
 					<span>Twitter</span>
 				</a>
-				<a href="https://t.me/idealgroup" target="_blank">
+				<a href="http://t.me/bitVM_chat" target="_blank">
 					<img src="assets/telegram.svg">
 					<span>Telegram</span>
 				</a>
